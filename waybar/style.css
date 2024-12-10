@@ -1,0 +1,258 @@
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    text-shadow: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/* Import variables from theme.scss file */
+@import "./theme.scss";
+
+/* === Main Background === */
+
+window#waybar {
+    color: #e6e6e6;
+    background: #11111b;
+}
+
+/* === Tooltip === */
+
+tooltip {
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+/* === Workspace Buttons === */
+
+#workspaces {
+    background: @workspaces;
+}
+
+#workspaces button {
+    color: @module-fg;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 0 2px;
+    transition: none;
+}
+
+#workspaces button:hover {
+    color: @hover-fg;
+    background: @hover-bg;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    color: @active-fg;
+    background: @active-bg;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+    padding: 0 6px;
+}
+
+#custom-left1,
+#custom-right1 {
+    color: @workspaces;
+    background: @main-bg;
+}
+
+/* === General === */
+
+#custom-power_profile,
+#custom-weather,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#tray,
+#backlight,
+#custom-pacman,
+#memory,
+#cpu {
+    /* background: #1e1e2e; */
+    padding-left: 8pt;
+    padding-right: 8pt;
+    /* border: 1px solid #181825; */
+}
+
+/* Current sway mode (resize etc) */
+#mode {
+    color: @white;
+    background: @mode;
+}
+
+#custom-pacman {
+    color: #61aae6;
+    margin-left: 5px;
+    background-color: @main-bg;
+}
+
+#custom-left1,
+#custom-left2,
+#custom-left3,
+#custom-left4,
+#custom-left5,
+#custom-left6,
+#custom-left7,
+#custom-left8,
+#custom-cpu_left_arrow,
+#custom-memory_left_arrow,
+#custom-logo_left_arrow {
+    text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+#custom-right1,
+#custom-right2,
+#custom-right3,
+#custom-right4,
+#custom-right5,
+#custom-memory_right_arrow,
+#custom-logo_right_arrow  {
+    text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* == Modules == */
+
+#custom-logo {
+    font-size: 16px;
+    background: @main-dark-bg;
+    background-image: url('/home/v1p/.config/waybar/assets/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.6); */
+}
+
+#custom-logo_left_arrow {
+    color: @main-dark-bg;
+    background-color: @main-bg;
+}
+
+#custom-logo_right_arrow {
+    color: @main-dark-bg;
+    background-color: @main-bg;
+}
+
+#custom-leftin1 {
+    color: @black-bg-00;
+}
+
+#custom-rightin1 {
+    color: @black-bg-00;
+}
+
+#memory {
+    color: @memory;
+    background-color: @black-bg-00;
+    /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.6); */
+}
+
+#custom-memory_left_arrow {
+    color: @black-bg-00;
+    background-color: @black-bg-01;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+/* == CPU == */
+
+#cpu {
+    color: @cpu;
+    background-color: @black-bg-01;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+#custom-cpu_left_arrow {
+    color: @black-bg-01;
+    background-color: @cpuinfo;
+}
+
+/* == Time == */
+
+#clock.time {
+    background: @black-bg-00;
+}
+
+#custom-right3 {
+    color: @black-bg-00;
+    background: @black-bg-01;
+}
+
+/* == Date == */
+
+#clock.date {
+    background: @black-bg-01;
+}
+
+#custom-right4 {
+    color: @black-bg-01;
+    background: @cpuinfo;
+}
+
+/* == Temperature == */
+
+#custom-paddc {
+    padding-right: 22px;
+}
+
+#custom-left2 {
+    color: @cpuinfo;
+    background: @main-bg;
+}
+
+#custom-cpuinfo {
+    background: @cpuinfo;
+    padding-left: 1px;
+    padding-right: 0;
+}
+
+
+#network {
+    color: #f9e2af;
+    background: @cpuinfo;
+}
+
+#bluetooth {
+    color: #89b4fa;
+    background: @cpuinfo;
+}
+
+#custom-right5 {
+    color: @cpuinfo;
+    background: @main-bg;
+}
+
+/* == Output Device == */
+
+#pulseaudio.microphone {
+    color: @pulseaudio-mic;
+    background: @pulseaudio-mic-bg;
+}
+
+#custom-left4 {
+    color: @pulseaudio-mic-bg;
+    background: @pulseaudio-bg;
+}
+
+#pulseaudio {
+    color: @pulseaudio;
+    background: @pulseaudio-bg;
+}
+
+#custom-left3 {
+    color: @pulseaudio-bg;
+    background: @main-bg;
+}
